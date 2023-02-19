@@ -49,7 +49,7 @@
     .dropbox a:hover {background: #1087dd; color: #fff;}
 
 
-
+    {% block style %}{% endblock %}
 
 </style>
 
@@ -83,6 +83,9 @@
               </li>
               <li class="nav-item">
               <a class="nav-link {% block dis11 %}{% endblock %} " href="{% url 'contactKB' %}">Контакты</a>
+              </li>
+                        <li class="nav-item">
+              <a class="nav-link {% block dis12 %}{% endblock %} " href="{% url 'register' %}">Регистрация</a>
               </li>
 {#              <li class="nav-item">#}
 {#              <a class="nav-link {% block dis2 %}{% endblock %}" href="{% url 'education' %}">Направления подготовки</a>#}

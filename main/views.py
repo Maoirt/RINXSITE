@@ -38,6 +38,11 @@ def aboutRINX(request):
     return render(request, 'main/aboutRINX.html')
 
 
+def register(request):
+    return render(request, 'main/register.html')
+
+
+
 def physics(request):
     sheds = SchedulePH.objects.all()
     teacherPH = TeachersPH.objects.all()
@@ -62,3 +67,4 @@ def contactKB(request):
 
 def gallery(request):
     return render(request, 'main/gallery.html')
+

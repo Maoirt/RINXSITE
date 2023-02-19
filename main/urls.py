@@ -14,4 +14,6 @@ urlpatterns = [
     path('computer ', views.computer, name='computer'),
     path('contactKB', views.contactKB, name='contactKB'),
     path('gallery ', views.gallery, name='gallery'),
+    path('register', views.register, name='register'),
+
 ]
