@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+
+{% block dis11 %}
+    disabled
+{% endblock %}"
+
+{% block title %}
+Контакты
+{% endblock %}
+
+{% block content %}
+
+        <h1>Контакты ответственных за проведение школы </h1>
+
+   {% for el in Contacts %}
+        <div class="card" style="width: 15rem; margin-top: 20px">
+         <img class="card-img-top" src="{{ el.mode }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{el.title}}</h5>
+            <p class="card-text">{{ el.description }}</p>
+
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}

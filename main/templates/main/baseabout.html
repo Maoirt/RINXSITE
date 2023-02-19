@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+
+<style>
+
+    @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+    .social a {
+        display: inline;
+        text-align: center;
+        width: 48px;
+        height: 48px;
+        float: left;
+        background: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+        border-radius: 6px;
+        margin: 0 10px 10px 0;
+        padding: 6px;
+        color: #000;
+
+
+}
+
+    .github a:hover {background: #191919; color: #fff;}
+    .youtube a:hover {background: #c4302b; color: #fff;}
+    .google-pluse a:hover {background: #DD4B39; color: #fff;}
+    .twitter a:hover {background: #00acee; color: #fff;}
+    .instagram a:hover {background: #3f729b; color: #fff;}
+    .facebook a:hover {background: #3b5998; color: #fff;}
+    .skype a:hover {background: #00aff0; color: #fff;}
+    .vk a:hover {background: #5d84ae; color: #fff;}
+    .odnoklassniki a:hover {background: #f93; color: #fff;}
+    .pinterest a:hover {background: #c8232c; color: #fff;}
+    .linkedin a:hover {background: #0e76a8; color: #fff;}
+    .telegram a:hover {background: #249bd7; color: #fff;}
+    .tumblr a:hover {background: #34526f; color: #fff;}
+    .windows a:hover {background: #125acd; color: #fff;}
+
+    .whatsapp a:hover {background: #50b154; color: #fff;}
+    .weibo a:hover {background: #d52b2b; color: #fff;}
+    .dropbox a:hover {background: #1087dd; color: #fff;}
+
+
+
+
+</style>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#" style="margin-left:30px">РИНХ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse" >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'home' %}">Назад</a>
+            </li>
+              <a class="nav-link {% block dis2 %}{% endblock %} " href="{% url 'education' %}">Направления подготовки</a>
+            </li>
+{#            <li class="nav-item">#}
+{#              <a class="nav-link {% block dis3 %}{% endblock %}" href="{% url 'schedule' %}">Расписание</a>#}
+{#            </li>#}
+              <li class="nav-item">
+              <a class="nav-link  {% block dis3 %}{% endblock %} " href="{% url 'teachers' %}">Преподаватели</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  {% block dis4 %}{% endblock %}" href="{% url 'contact' %}">Контакты</a>
+
+{#            </li>#}
+{#              <li class="nav-item">#}
+{#              <a class="nav-link {% block dis6 %}{% endblock %}" href="{% url 'about' %}">О нас</a>#}
+{#            </li>#}
+          </ul>
+
+        </div>
+      </nav>
+
+    </header>
+    <div class="container" style="margin-top:100px">
+
+           {% block content %}{% endblock %}
+
+    </div>
+
+
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-12 col-md " style="margin-left:24px">
+              <a href="https://rsue.ru/"><img class="mb-2"  src="https://www.rsue.ru/bitrix/templates/info_light_blue/img/logo.svg" alt="" width="100" height="100" > </a>
+            <small class="d-block mb-3 text-muted">ФГБОУ высшего образования "Ростовский государственный экономический университет (РИНХ)"</small>
+
+
+          </div>
+          <div class="col-6 col-md">
+              <h5>РГЭУ(РИНХ)</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="https://www.rsue.ru/">Главная страница</a></li>
+              <li><a class="text-muted" href="https://www.rsue.ru/universitet/">Университет</a></li>
+              <li><a class="text-muted" href="https://www.rsue.ru/sveden/">Сведения об образовательной организации</a></li>
+              <li><a class="text-muted" href="https://www.rsue.ru/nauka/">Наука</a></li>
+              <li><a class="text-muted" href="https://www.rsue.ru/obrazovanie/">Образование</a></li>
+              <li><a class="text-muted" href="https://www.rsue.ru/abitur/"></a></li>
+              <li><a class="text-muted" href="https://www.rsue.ru/studentam/">Студентам</a></li>
+                <li><a class="text-muted" href="https://www.rsue.ru/magistrantam/">Магистрантам</a></li>
+                <li><a class="text-muted" href="https://www.rsue.ru/aspirantam/">Аспирантам</a></li>
+                <li><a class="text-muted" href="https://www.rsue.ru/vypusknikam/">Выпусникам</a></li>
+                <li><a class="text-muted" href="https://www.rsue.ru/prepodavatelyam/">Преподавателям</a></li>
+                <div style="margin-top:10px">
+                    <span class="social vk">
+                    <a href="https://vk.com/rsue.rinh" target="_blank"><i class="fa fa-vk fa-2x"></i></a>
+                    </span>
+                    <span class="social telegram">
+                    <a href="https://t.me/rsue_rinh" target="_blank"><i class="fa fa-paper-plane fa-2x"></i></a>
+                    </span>
+                    <span class="social odnoklassniki">
+                    <a href="https://ok.ru/group/60991174279312" target="_blank"><i class="fa fa-odnoklassniki fa-2x"></i></a>
+                    </span>
+                </div>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+              <h5>КТиИБ</h5>
+            <ul class="list-unstyled text-small">
+
+                <li><a class="text-muted" href="https://www.rsue.ru/">Главная страница</a></li>
+              <li><a class="text-muted" href="http://ktib-rsue.ru/napravleniya-podgotovki.html">Направления подготовки</a></li>
+              <li><a class="text-muted" href="http://ktib-rsue.ru/nauka-i-obrazovanie.html">Наука и образования</a></li>
+              <li><a class="text-muted" href="http://ktib-rsue.ru/live.html">Live</a></li>
+              <li><a class="text-muted" href="http://ktib-rsue.ru/kontakty.html">Контакты</a></li>
+                <div style="margin-top:10px">
+                    <span class="social vk">
+                    <a href="https://vk.com/ktiib" target="_blank"><i class="fa fa-vk fa-2x"></i></a>
+                    </span>
+
+                </div>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Полезная информация</h5>
+            <ul class="list-unstyled text-small">
+
+              <li><a class="text-muted" href="http://ktib-rsue.ru/studencheskaya-zhizn.html">Студенчекская жизнь</a></li>
+              <li><a class="text-muted" href="http://ktib-rsue.ru/trudoustrojstvo.html">Трудоустройство</a></li>
+              <li><a class="text-muted" href="http://ktib-rsue.ru/professionalnaya-podgotovka.html">Профессиональная подготовка</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+</body>
+
+
+
+</html>

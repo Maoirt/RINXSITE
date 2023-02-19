@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+
+{% block dis9 %}
+    disabled
+{% endblock %}"
+
+{% block title %}
+Информатика ЕГЭ
+{% endblock %}
+
+
+{% block content %}
+    <h1>Информатика ЕГЭ</h1>
+    <div style="margin-top:60px" >
+    <h2>Расписание</h2>
+    </div>
+    {% for el in sched %}
+        <div class="card" style="width: 50rem; display: flex; flex-direction: row; margin-top: 20px">
+        <div class="card-body">
+            <h5 class="card-title">{{el.title}}</h5>
+            <p class="card-text">{{ el.description }}</p>
+            <p class="card-text">{{ el.dataD }}</p>
+            <p class="card-text">{{ el.mode }}</p>
+
+        </div>
+    </div>
+
+    {% endfor %}
+
+    <hr style="height: 10px">
+    <h2>Преподаватели</h2>
+
+        {% for el in teacherIt %}
+        <div class="card" style="width: 15rem; margin-top: 20px">
+         <img class="card-img-top" src="{{ el.mode }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{el.title}}</h5>
+            <p class="card-text">{{ el.description }}</p>
+            <p class="card-text">{{ el.dataD }}</p>
+
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
